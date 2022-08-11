@@ -1,0 +1,47 @@
+path routes:
+  GET /
+  GET /register
+  POST /register
+  GET /login
+  POST /login
+  GET /tag?:nomer_sesi
+  GET /tag?:nomer_sesi&page=:nomer_halaman
+  GET /?filtered=latest
+  GET /?filtered=oldest
+  GET /?search=:keyword
+  GET /teams
+  GET /dashboard
+  GET /dashboard/setting-profile
+  GET /dashboard/notif
+  GET /dashboard/manage-posts/posts
+  POST /dashboard/manage-posts/posts/delete
+  GET /dashboard/saved-post
+  GET /dashboard/stats
+  GET /dashboard/integration
+  PUT /dashboard/integration/cuy-cli
+  PUT /dashboard/update-username
+  GET /dashboard/mark-notification-as-read/:id
+  GET /dashboard/change-password
+  PUT /dashboard/update-password
+  POST /dashboard/photo
+  POST /dashboard/logut
+  GET /cuypeople/status
+  GET /storage/images/:id
+  GET /post/:id
+  POST /post/comment
+  POST /post/like/love
+  POST /post/saved-post/saved
+  GET /author/:username
+  GET /forgot-password
+  POST /forgot-password
+  GET /reset-password/:token
+  POST /reset-password
+  GET /verify-email
+  GET /verify-email/:id/:hash
+  POST /email/verification-notification
+  GET /confirm-password
+  POST /confirm-password
+  POST /logout
+
+  Initialize postgres database
+  sudo docker run -d -p 5432:5432 --env-file=.env --name pg_db postgres:alpine
